@@ -9,7 +9,6 @@ TOKEN = 'ВАШ ТОКЕН'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
-
 import telebot
 from telebot import types
 import random as r
@@ -26,7 +25,6 @@ def start_message(message):
 @bot.message_handler(commands=['привет'])
 def handle_command(message):
   bot.send_message(message.chat.id, 'Привет,что хотите сейчас делать?')
-
 
 @bot.message_handler(commands=['пока'])
 def handle_command(message):
@@ -61,7 +59,7 @@ def handle_command(message):
   pers25 = open("nin.jpg", "rb")
   pers26 = open("mona.jpg", "rb")
   pers27 = open("001h.jpg", "rb")
-  s = {"Элой": pers1,"Кокоми": pers7, "Баал": pers8, "Сара": pers9, "Саю": pers10, "Тома": pers2, "Ци Ци": pers3,"Розария": pers4, "Альбедо": pers5, "Барбара": pers6, "Дилюк": pers11, "Венти": pers12, "Горо": pers13, "Ху Тао": pers14, "Аято": pers15, "Сяо": pers16, "Чжун Ли": pers17, "Шэнь Хэ": pers18, "	Янь Фэй": pers19, "яэ мико": pers20, "итто": pers21, "кли": pers22, "тарталия": pers23, "фишль": pers24, "нин гуан": pers25, "мона": pers26, "кадзуха": pers27}
+  s = {"Элой": pers1,"Кокоми": pers7, "Баал": pers8, "Сара": pers9, "Саю": pers10, "Тома": pers2, "Ци Ци": pers3,"Розария": pers4, "Альбедо": pers5, "Барбара": pers6, "Дилюк": pers11, "Венти": pers12, "Горо": pers13, "Ху Тао": pers14, "Аято": pers15, "Сяо": pers16, "Чжун Ли": pers17, "Шэнь Хэ": pers18, "Янь Фэй": pers19, "яэ мико": pers20, "итто": pers21, "кли": pers22, "тарталия": pers23, "фишль": pers24, "нин гуан": pers25, "мона": pers26, "кадзуха": pers27}
   sl = r.choice(list(s.keys()))
   bot.send_message(message.chat.id, sl)
   bot.send_photo(message.chat.id, s[sl])
@@ -108,7 +106,6 @@ def handle_command(message):
   bot.send_photo(message.chat.id, sp[ls])
 
 bot.polling(none_stop = True)
-
 
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
