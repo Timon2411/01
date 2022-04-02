@@ -105,6 +105,7 @@ def handle_command(message):
   bot.send_message(message.chat.id, ls)
   bot.send_photo(message.chat.id, sp[ls])
 
+bot.polling(none_stop = True)
 
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
