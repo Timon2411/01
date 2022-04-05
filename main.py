@@ -12,7 +12,6 @@ server = Flask(__name__)
 import telebot
 from telebot import types
 import random as r
-bot = telebot.TeleBot("5206622849:AAF1cPEbHNmlzMTeXs511DCUnqrtDm7ebnc")
 
 @bot.message_handler(commands=['start', 'help'])
 def start_message(message):
