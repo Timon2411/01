@@ -25,6 +25,10 @@ def start_message(message):
 def handle_command(message):
   bot.send_message(message.chat.id, 'Привет,что хотите сейчас делать?')
 
+@bot.message_handler(commands=['play'])
+def handle_command(message):
+  bot.send_message(message.chat.id, 't.me/Botiara_bard_bard22_bot')
+
 @bot.message_handler(commands=['пока'])
 def handle_command(message):
   bot.send_message(message.chat.id, 'Пока')
