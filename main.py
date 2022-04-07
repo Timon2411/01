@@ -19,6 +19,7 @@ def start_message(message):
     keyboard.add("/wish10")
     keyboard.add("/hatch")
     keyboard.add("/wepon")
+    keyboard.add("/play")
     bot.send_message(message.from_user.id, "Здравствуй! Что собираешься делать", reply_markup=keyboard)
 
 @bot.message_handler(commands=['привет'])
