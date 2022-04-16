@@ -19,14 +19,14 @@ def start_message(message):
     keyboard.add("/wish10")
     keyboard.add("/hatch")
     keyboard.add("/wepon")
-    keyboard.add("/p")
+    keyboard.add("/pдфн")
     bot.send_message(message.from_user.id, "Здравствуй! Что собираешься делать", reply_markup=keyboard)
 
 @bot.message_handler(commands=['привет'])
 def handle_command(message):
   bot.send_message(message.chat.id, 'Привет,что хотите сейчас делать?')
 
-@bot.message_handler(commands=['played'])
+@bot.message_handler(commands=['play'])
 def handle_command(message):
   bot.send_message(message.chat.id, '@Botiara_bard_bard22_bot')
 
